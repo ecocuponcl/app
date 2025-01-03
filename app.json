@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "EcoCupon",
+    "slug": "ecocupon-react",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ecoboltorg.ecocuponreact"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ecoboltorg.ecocuponreact"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cb4a5775-45cf-49c9-907e-6c4f775c41e1"
+      }
+    },
+    "owner": "ecobolt-org",
+    "updates": {
+      "url": "https://u.expo.dev/cb4a5775-45cf-49c9-907e-6c4f775c41e1"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
