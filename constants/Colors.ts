@@ -1,26 +1,25 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Colores principales de EcoCupon. Usando una paleta de colores verdes y eco-amigables.
  */
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+const tintColorLight = '#4CAF50';  // Verde principal
+const tintColorDark = '#81C784';   // Verde más claro para modo oscuro
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
+    text: '#2E7D32',              // Verde oscuro para texto
+    background: '#F1F8E9',        // Verde muy claro para fondo
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
+    icon: '#388E3C',             // Verde medio para iconos
+    tabIconDefault: '#689F38',    // Verde oliva para iconos inactivos
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
+    text: '#C8E6C9',             // Verde claro para texto
+    background: '#1B5E20',        // Verde muy oscuro para fondo
     tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
+    icon: '#81C784',             // Verde medio claro para iconos
+    tabIconDefault: '#66BB6A',    // Verde medio para iconos inactivos
     tabIconSelected: tintColorDark,
   },
 };

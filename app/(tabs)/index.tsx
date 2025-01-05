@@ -8,47 +8,55 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#4CAF50', dark: '#1B5E20' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/EcoCupon_head.webp')}
+          style={styles.headerImage}
+          resizeMode="cover"
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">EcoCupon Chile</ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+      
+      <ThemedView style={styles.heroContainer}>
+        <ThemedText type="title">Incentivando el Consumo Responsable</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+          Recicla, gana cupones y apoya el medio ambiente con EcoCupon Chile.
         </ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
+        <ThemedText type="subtitle">¿Cómo Funciona?</ThemedText>
+        <ThemedView style={styles.steps}>
+          <ThemedView style={styles.step}>
+            <ThemedText type="subtitle">1. Recolecta</ThemedText>
+            <ThemedText>
+              Entrega tus productos reciclables como baterías en un Punto Eco autorizado.
+            </ThemedText>
+          </ThemedView>
+          <ThemedView style={styles.step}>
+            <ThemedText type="subtitle">2. Escanea</ThemedText>
+            <ThemedText>
+              Escanea el código QR del Punto Eco para validar tu entrega.
+            </ThemedText>
+          </ThemedView>
+          <ThemedView style={styles.step}>
+            <ThemedText type="subtitle">3. Recibe</ThemedText>
+            <ThemedText>
+              Obtén un cupón de descuento para productos ecológicos como EcoBaterías.
+            </ThemedText>
+          </ThemedView>
+        </ThemedView>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
+        <ThemedText type="subtitle">Beneficios</ThemedText>
+        <ThemedText>• Incentiva el reciclaje responsable</ThemedText>
+        <ThemedText>• Obtén descuentos en productos sostenibles</ThemedText>
+        <ThemedText>• Forma parte de una comunidad consciente del medio ambiente</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -59,16 +67,31 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    marginBottom: 16,
+  },
+  heroContainer: {
+    gap: 8,
+    marginBottom: 24,
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+    borderRadius: 8,
   },
   stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+    gap: 12,
+    marginBottom: 24,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  steps: {
+    gap: 16,
+  },
+  step: {
+    padding: 16,
+    backgroundColor: 'rgba(76, 175, 80, 0.05)',
+    borderRadius: 8,
+    gap: 8,
+  },
+  headerImage: {
+    width: '100%',
+    height: 200,
   },
 });
